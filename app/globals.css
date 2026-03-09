@@ -600,14 +600,155 @@ a.meta-card:hover {
   background: rgba(13, 143, 143, 0.08);
 }
 
-.contact-box {
-  border-radius: 16px;
-  padding: 24px;
-  background: linear-gradient(135deg, rgba(13, 143, 143, 0.12), rgba(242, 108, 79, 0.15));
+.contact-container {
+  width: 100%;
 }
 
-.contact-box small {
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  border-radius: 24px;
+  padding: 48px;
+  background: linear-gradient(135deg, rgba(242, 108, 79, 0.06), rgba(13, 143, 143, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 40px rgba(16, 33, 41, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-content .eyebrow {
+  margin-bottom: 8px;
+  color: var(--warm);
+}
+
+.contact-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.highlight-text {
+  background: linear-gradient(120deg, var(--accent-strong), var(--warm));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.contact-content .lead {
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.cta-row-large {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-large {
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-status-container {
+  margin-top: 20px;
+  height: 24px;
+}
+
+.copy-status {
+  display: inline-flex;
+  padding: 6px 14px;
+  background: rgba(13, 143, 143, 0.06);
   color: var(--muted);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.copy-status.active {
+  background: rgba(13, 143, 143, 0.15);
+  color: var(--accent-strong);
+  transform: translateY(-2px);
+}
+
+.contact-visual {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: float 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.circle-1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(13, 143, 143, 0.2);
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 220px;
+  height: 220px;
+  background: rgba(242, 108, 79, 0.15);
+  bottom: 0;
+  left: 20%;
+  animation-delay: -2s;
+}
+
+.circle-3 {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 231, 201, 0.5);
+  top: 30%;
+  right: 50%;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
 }
 
 footer {
@@ -646,8 +787,17 @@ footer {
   .about-bento,
   .skill-groups,
   .achievements-grid,
-  .project-grid {
+  .project-grid,
+  .contact-box {
     grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 32px 24px;
+  }
+
+  .contact-visual {
+    min-height: 180px;
   }
 
   nav {

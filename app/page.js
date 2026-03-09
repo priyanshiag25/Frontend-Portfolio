@@ -581,19 +581,38 @@ export default function HomePage() {
         </section>
 
         <section className="section" id="contact">
-          <div className="contact-box glass reveal">
-            <p className="eyebrow">Contact</p>
-            <h2>Let&apos;s build something high-impact.</h2>
-            <p>Available for frontend and mobile product engineering opportunities.</p>
-            <div className="cta-row">
-              <a className="btn" href="mailto:agarwalpriyanshi0153@gmail.com">
-                Send Email
-              </a>
-              <button className="btn btn-ghost" onClick={copyEmail}>
-                Copy Email
-              </button>
+          <div className="contact-container reveal">
+            <div className="contact-box glass">
+              <div className="contact-content">
+                <p className="eyebrow">Get In Touch</p>
+                <h2>Let&apos;s build something <span className="highlight-text">high-impact.</span></h2>
+                <p className="lead">
+                  Available for frontend and mobile product engineering opportunities. I&apos;m currently open to new roles and ready to contribute to ambitious projects.
+                </p>
+                <div className="cta-row-large">
+                  <a className="btn btn-large" href="mailto:agarwalpriyanshi0153@gmail.com">
+                    <span className="btn-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </span>
+                    Say Hello
+                  </a>
+                  <button className="btn btn-ghost btn-large" onClick={copyEmail}>
+                    <span className="btn-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </span>
+                    Copy Email
+                  </button>
+                </div>
+                <div className="copy-status-container">
+                  <small aria-live="polite" className={`copy-status ${copyStatus ? 'active' : ''}`}>{copyStatus || "agarwalpriyanshi0153@gmail.com"}</small>
+                </div>
+              </div>
+              <div className="contact-visual">
+                <div className="visual-circle circle-1"></div>
+                <div className="visual-circle circle-2"></div>
+                <div className="visual-circle circle-3"></div>
+              </div>
             </div>
-            <small aria-live="polite">{copyStatus}</small>
           </div>
         </section>
       </main>
