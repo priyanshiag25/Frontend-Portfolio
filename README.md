@@ -50,3 +50,16 @@ Deploy directly to Vercel:
 ```bash
 npx vercel --prod
 ```
+
+## Free hosting on GitHub Pages
+
+This repo is configured for automatic GitHub Pages deployment using Actions.
+
+1. Push this project to your GitHub repo's `main` branch.
+2. In GitHub repo settings, open `Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. The workflow `.github/workflows/deploy-gh-pages.yml` will publish the site.
+
+Expected URL:
+
+- `https://priyanshiag25.github.io/Frontend-Portfolio/`
