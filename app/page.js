@@ -259,9 +259,9 @@ export default function HomePage() {
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
 
       <header className="header glass">
-        <a href="#home" className="brand" onClick={(event) => handleNavClick(event, "home")}>
+        {/* <a href="#home" className="brand" onClick={(event) => handleNavClick(event, "home")}>
           PA
-        </a>
+        </a> */}
 
         <button
           className="menu-toggle"
@@ -269,9 +269,10 @@ export default function HomePage() {
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
-          Menu
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-
         <nav className={mobileMenuOpen ? "open" : ""}>
           {sections.map(([id, label]) => (
             <a

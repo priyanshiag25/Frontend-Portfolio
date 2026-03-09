@@ -817,17 +817,36 @@ footer {
     display: flex;
   }
 
-  .menu-toggle {
+  /* .menu-toggle {
     display: inline-flex;
     border: 1px solid var(--line);
     border-radius: 10px;
     background: #fff;
     color: var(--muted);
     padding: 8px 10px;
-  }
+  } */
 
   .header .btn-small {
     display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 2px;
   }
 }
 
