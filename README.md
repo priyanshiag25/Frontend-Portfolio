@@ -51,15 +51,36 @@ Deploy directly to Vercel:
 npx vercel --prod
 ```
 
-## Free hosting on GitHub Pages
+## How to Update and Deploy Your Site
 
-This repo is configured for automatic GitHub Pages deployment using Actions.
+Whenever you make changes to your code and want to see them live on your website, follow these simple steps using your terminal:
 
-1. Push this project to your GitHub repo's `main` branch.
-2. In GitHub repo settings, open `Pages`.
-3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
-4. The workflow `.github/workflows/deploy-gh-pages.yml` will publish the site.
+1. **Stage your changes:**
+   Tell Git to track all the modified files:
+   ```bash
+   git add .
+   ```
 
-Expected URL:
+2. **Commit your changes:**
+   Save your files to your local repository with a clear message describing what you changed:
+   ```bash
+   git commit -m "Describe your changes here, e.g., Updated contact info"
+   ```
 
-- `https://priyanshiag25.github.io/Frontend-Portfolio/`
+3. **Push to GitHub:**
+   Upload your saved changes to the `main` branch on GitHub:
+   ```bash
+   git push
+   ```
+   *(Note: Whenever it asks for your password, always paste your **Personal Access Token** instead of your GitHub account password).*
+
+**That's it!** 🎉 
+Because we have set up GitHub Actions, pushing to the `main` branch will *automatically* trigger a new build and deployment process. 
+
+### Monitor Your Deployment
+Want to watch it happen? 
+1. Open your repository on GitHub.
+2. Click on the **Actions** tab at the top.
+3. You will see a new workflow running. Once it turns green, your site is updated on the live URL!
+
+**Live URL:** [https://priyanshiag25.github.io/Frontend-Portfolio/](https://priyanshiag25.github.io/Frontend-Portfolio/)
